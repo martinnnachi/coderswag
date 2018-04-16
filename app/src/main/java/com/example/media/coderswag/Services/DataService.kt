@@ -14,24 +14,39 @@ object DataService {
     )
 
     val hats = listOf(
-            Product("Devslopes Graphic Beanie", "£23", "hat01"),
-            Product("Devslopes Hat Black", "£20", "hat02"),
-            Product("Devslopes Hat White", "£17", "hat03"),
-            Product("Devslopes Hat Snapback", "£25", "hat04")
+            Product("Devslopes Graphic Beanie", "£23", "hat1"),
+            Product("Devslopes Hat Black", "£20", "hat2"),
+            Product("Devslopes Hat White", "£17", "hat3"),
+            Product("Devslopes Hat Snapback", "£25", "hat4")
     )
 
     val hoodies = listOf(
-            Product("Devslopes Hoodie Grey", "£27", "hoodie01"),
-            Product("Devslopes Hoodie Red", "£30", "hoodie02"),
-            Product("Devslopes Hoodie Black", "£29", "hoodie03"),
-            Product("Devslopes Hoodie White", "£32", "hoodie04")
+            Product("Devslopes Hoodie Grey", "£27", "hoodie1"),
+            Product("Devslopes Hoodie Red", "£30", "hoodie2"),
+            Product("Devslopes Hoodie Black", "£29", "hoodie3"),
+            Product("Devslopes Hoodie White", "£32", "hoodie4")
     )
 
     val shirts = listOf(
-            Product("Devslopes Shirt Grey", "£20", "shirt01"),
-            Product("Devslopes Badge Light Grey", "£22", "shirt02"),
-            Product("Devslopes Shirt Black", "£17", "shirt03"),
-            Product("Devslopes Shirt White", "£21", "shirt04"),
-            Product("Devslopes Shirt White", "£21", "shirt05")
+            Product("Devslopes Shirt Grey", "£20", "shirt1"),
+            Product("Devslopes Badge Light Grey", "£22", "shirt2"),
+            Product("Devslopes Shirt Black", "£17", "shirt3"),
+            Product("Devslopes Shirt White", "£21", "shirt4"),
+            Product("Devslopes Shirt White", "£21", "shirt5")
     )
+
+
+    val digitalGoods = listOf<Product>()
+
+    fun getProducts(category: String): List<Product> {
+
+      return when (category) {
+            "SHIRTS" ->  shirts
+            "HATS" ->  hats
+            "HOODIES" -> hoodies
+            else ->  digitalGoods
+        }
+    }
+
+
 }
